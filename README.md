@@ -19,6 +19,37 @@ NFT #1 on Polygon is the root Origin of all Seeds:
 - **THRUST Token**: [`0x969F60Bfe17962E0f061B434596545C7b6Cd6Fc4`](https://bscscan.com/token/0x969F60Bfe17962E0f061B434596545C7b6Cd6Fc4)
 - **Domain**: [deltaverse.dao](https://unstoppabledomains.com/d/deltaverse.dao)
 
+## True DELTA VERSE — Self-Verifying NFTs
+
+**Evolution from Original to True DELTA VERSE**
+
+The original DELTA VERSE NFT contained decorative binary — aesthetically pleasing but meaningless. **True DELTA VERSE** represents the evolution to self-verifying NFTs with three layers of immutable truth:
+
+### 🔍 Three Verification Layers
+1. **Visual Binary Encoding**: Real binary digits encoding "DELTA VERSE :: SELF-VERIFYING NFT :: THREE LAYERS OF TRUTH"
+2. **Steganographic Payload**: Hidden verification data extractable via `steghide`
+3. **On-Chain Hash Anchoring**: Cryptographic hashes stored in smart contracts
+
+### 📁 New Components
+- **`contracts/TrueDeltaVerse.sol`**: ERC-1155 with three-hash verification
+- **`scripts/generate_true_deltaverse.py`**: PIL-based image generator
+- **`scripts/verify_deltaverse.py`**: Three-layer verification tool
+- **`test/TrueDeltaVerse.t.sol`**: Comprehensive test suite (40 tests)
+
+### 🚀 Quick Verification
+```bash
+# Generate True DELTA VERSE image
+python3 scripts/generate_true_deltaverse.py
+
+# Embed steganographic payload
+./scripts/embed_steganography.sh
+
+# Verify all three layers
+python3 scripts/verify_deltaverse.py
+```
+
+**See [docs/TrueDeltaVerse.md](./docs/TrueDeltaVerse.md) for complete documentation.**
+
 ## Contracts (9 — Foundry / Solidity 0.8.24)
 
 | Contract | Purpose |

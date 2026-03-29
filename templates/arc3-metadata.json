@@ -1,0 +1,122 @@
+{
+  "name": "True DELTA VERSE",
+  "description": "Self-verifying NFT with three layers of truth on Algorand. Visual binary encoding, steganographic payload via Tomb/steghide, and native ARC-3 image integrity verification. Evolution from Polygon's decorative binary to Algorand's immutable truth layers.",
+  "image": "ipfs://{{IMAGE_CID}}",
+  "image_integrity": "sha256-{{POST_STEG_HASH}}",
+  "image_mimetype": "image/jpeg",
+  "external_url": "https://deltaverse.pythai.net",
+  "background_color": "121216",
+  "properties": {
+    "verification_layers": {
+      "count": 3,
+      "layer_1_visual": {
+        "description": "Read binary digits from coin rings and decode to ASCII",
+        "message": "DELTA VERSE :: SELF-VERIFYING NFT :: THREE LAYERS OF TRUTH",
+        "instruction": "Photograph image, read 0s and 1s from concentric rings",
+        "binary_length_bits": 464,
+        "encoding": "ASCII to 8-bit binary per character"
+      },
+      "layer_2_steganographic": {
+        "description": "Hidden provenance payload in JPEG pixels",
+        "tool": "steghide",
+        "extraction": "steghide extract -sf image.jpg -p passphrase",
+        "payload_type": "JSON with creator signature and verification data",
+        "tomb_compatible": "Yes - tomb exhume supported"
+      },
+      "layer_3_onchain": {
+        "description": "Native ARC-3 image_integrity verification",
+        "algorithm": "SHA-256",
+        "location": "Asset properties - image_integrity field",
+        "verification": "Compare computed hash to asset.params.metadata_hash",
+        "algorand_benefit": "Zero-fee verification queries"
+      }
+    },
+    "hashes": {
+      "pre_steg_sha256": "{{PRE_STEG_HASH}}",
+      "post_steg_sha256": "{{POST_STEG_HASH}}",
+      "manifesto_sha256": "{{MANIFESTO_HASH}}",
+      "metadata_hash": "{{METADATA_HASH}}"
+    },
+    "algorand_advantages": [
+      "Native SHA-256 image integrity verification via ARC-3",
+      "Immutable asset properties stored on-chain",
+      "Zero transaction fees for verification queries",
+      "Real-time finality (~3.3 second blocks)",
+      "No gas wars or MEV manipulation",
+      "Environmentally sustainable proof-of-stake",
+      "Python-native smart contract development"
+    ],
+    "cross_chain_evolution": {
+      "original_polygon": {
+        "contract": "0x024b464ec595f20040002237680026bf006e8f90",
+        "chain_id": 137,
+        "token_id": 1,
+        "binary_type": "Decorative (random)",
+        "verification": "None",
+        "minting": "OpenSea no-code SeaDrop clone"
+      },
+      "true_algorand": {
+        "asset_id": "{{ASSET_ID}}",
+        "binary_type": "Real (meaningful message)",
+        "verification": "Three immutable layers",
+        "minting": "Custom ARC-3 with integrity verification",
+        "integration": "x402 micropayment protocol bridge"
+      }
+    },
+    "technical_specs": {
+      "image_format": "JPEG (steghide compatible)",
+      "dimensions": "2048x2048",
+      "compression": "95% quality",
+      "rings": 5,
+      "font": "DejaVu Sans Mono (binary digits)",
+      "gradient": "Metallic silver with radial highlights",
+      "generated_by": "generate_true_deltaverse.py"
+    },
+    "deltaverse_ecosystem": {
+      "creator": "Professor Codephreak / PYTHAI",
+      "character": "Cypherian Weaver (Master coder and quantum weaver)",
+      "domain": "Cybernetic realms of the DeltaVerse",
+      "framework": "Aetheric Codex Framework",
+      "node": "Etherwave Node (pulsating heart of energy)",
+      "abilities": [
+        "Reality thread weaving",
+        "Binary manipulation",
+        "Quantum code generation",
+        "Dynamic realm adaptation"
+      ]
+    },
+    "usage_guide": {
+      "verification_steps": [
+        "1. Query Algorand asset properties for image_integrity hash",
+        "2. Download image from IPFS using this metadata",
+        "3. Read visible binary from coin rings - should decode to message",
+        "4. Extract steganographic payload with steghide",
+        "5. Compute SHA-256 of image file",
+        "6. Verify computed hash matches asset.image_integrity"
+      ],
+      "tools_required": [
+        "Algorand wallet or indexer API access",
+        "IPFS gateway or client",
+        "steghide or tomb for payload extraction",
+        "SHA-256 calculator for hash verification"
+      ],
+      "verification_cost": "Zero ALGO (read-only queries)"
+    },
+    "compliance": {
+      "standard": "ARC-3",
+      "metadata_version": "1.0",
+      "algorand_features": [
+        "Native asset creation",
+        "Built-in metadata hash verification",
+        "Immutable properties",
+        "Atomic transfers"
+      ],
+      "ipfs_storage": "Metadata and image on content-addressed IPFS",
+      "copyright": "DELTAVERSE (c) PYTHAI"
+    }
+  },
+  "localization": {
+    "uri": "ipfs://{{LOCALIZATION_CID}}/{locale}.json",
+    "default": "en"
+  }
+}

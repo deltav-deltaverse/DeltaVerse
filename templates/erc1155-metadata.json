@@ -1,0 +1,131 @@
+{
+  "name": "True DELTA VERSE",
+  "description": "Self-verifying NFT with three layers of truth: visual binary encoding, steganographic payload, and on-chain hash anchoring. Evolution from the original DELTA VERSE (0x024b464ec595f20040002237680026bf006e8f90) from decorative binary to real, verifiable encoding. Each binary digit in the image is meaningful and decodes to: 'DELTA VERSE :: SELF-VERIFYING NFT :: THREE LAYERS OF TRUTH'",
+  "image": "ipfs://{{IMAGE_CID}}",
+  "external_url": "https://deltaverse.pythai.net",
+  "animation_url": null,
+  "background_color": "121216",
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Self-Verifying NFT"
+    },
+    {
+      "trait_type": "Verification Layers",
+      "value": "3"
+    },
+    {
+      "trait_type": "Binary Encoding",
+      "value": "Real (not decorative)"
+    },
+    {
+      "trait_type": "Steganography Tool",
+      "value": "Tomb/Steghide"
+    },
+    {
+      "trait_type": "Creator",
+      "value": "Professor Codephreak / PYTHAI"
+    },
+    {
+      "trait_type": "Original Contract",
+      "value": "0x024b464ec595f20040002237680026bf006e8f90"
+    },
+    {
+      "trait_type": "Original Chain",
+      "value": "Polygon"
+    },
+    {
+      "trait_type": "Image Format",
+      "value": "JPEG (Steghide Compatible)"
+    },
+    {
+      "trait_type": "Binary Message",
+      "value": "DELTA VERSE :: SELF-VERIFYING NFT :: THREE LAYERS OF TRUTH"
+    },
+    {
+      "trait_type": "Copyright",
+      "value": "DELTAVERSE (c) PYTHAI"
+    }
+  ],
+  "properties": {
+    "verification": {
+      "layer_1": {
+        "name": "Visual Binary Layer",
+        "description": "Read binary digits from coin image rings",
+        "instruction": "Photograph the coin, read 0s and 1s, decode to ASCII text",
+        "message_encoded": "DELTA VERSE :: SELF-VERIFYING NFT :: THREE LAYERS OF TRUTH",
+        "binary_length_bits": 464
+      },
+      "layer_2": {
+        "name": "Steganographic Layer",
+        "description": "Hidden payload embedded in JPEG pixels",
+        "instruction": "steghide extract -sf true_deltaverse_final.jpg -p passphrase",
+        "tool": "steghide",
+        "compatible_tools": ["tomb exhume", "steghide", "outguess"],
+        "payload_type": "Provenance JSON with creator signature"
+      },
+      "layer_3": {
+        "name": "On-Chain Hash Layer",
+        "description": "Immutable hash stored in smart contract",
+        "instruction": "Call verifyPostStegHash() with computed image SHA-256",
+        "hash_algorithm": "SHA-256",
+        "hash_location": "Contract state variable postStegHash"
+      }
+    },
+    "technical": {
+      "pre_steg_sha256": "{{PRE_STEG_HASH}}",
+      "post_steg_sha256": "{{POST_STEG_HASH}}",
+      "manifesto_sha256": "{{MANIFESTO_HASH}}",
+      "image_dimensions": "2048x2048",
+      "file_size_bytes": "{{FILE_SIZE}}",
+      "compression_quality": 95,
+      "binary_rings": 5,
+      "encoding_method": "ASCII to 8-bit binary per character"
+    },
+    "evolution": {
+      "original": {
+        "contract": "0x024b464ec595f20040002237680026bf006e8f90",
+        "chain": "Polygon",
+        "chain_id": 137,
+        "token_id": 1,
+        "description": "Original DELTA VERSE with decorative binary"
+      },
+      "improvement": {
+        "binary_encoding": "Real message instead of random digits",
+        "steganography": "Hidden verification payload added",
+        "smart_contract": "Custom ERC-1155 with hash verification functions",
+        "metadata": "Self-referential verification instructions"
+      }
+    },
+    "ecosystem": {
+      "creator": "Professor Codephreak / PYTHAI",
+      "organization": "PYTHAI",
+      "framework": "Aetheric Codex Framework",
+      "related_character": "Cypherian Weaver",
+      "domain": "DELTAVERSE",
+      "copyright": "DELTAVERSE (c) PYTHAI"
+    },
+    "usage_instructions": {
+      "verify_authenticity": [
+        "1. Download the image file",
+        "2. Read visible binary digits from rings (should decode to the message)",
+        "3. Extract hidden payload: steghide extract -sf image.jpg",
+        "4. Compute SHA-256 hash of image",
+        "5. Verify hash matches contract.postStegHash via contract call"
+      ],
+      "tools_needed": [
+        "Image viewer (to read binary)",
+        "steghide (to extract payload)",
+        "Web3 wallet (to verify on-chain hash)",
+        "SHA-256 calculator (to compute image hash)"
+      ]
+    },
+    "compliance": {
+      "standard": "ERC-1155",
+      "metadata_standard": "OpenSea/ERC-1155 metadata standard",
+      "royalty_standard": "EIP-2981",
+      "royalty_percentage": "5%",
+      "royalty_recipient": "0xbC62D5e6e3555438061a3D12b7Cd94AaBEe07346"
+    }
+  }
+}
